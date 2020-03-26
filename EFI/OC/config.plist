@@ -2031,9 +2031,9 @@
 		<key>Drivers</key>
 		<array>
 			<string>ApfsDriverLoader.efi</string>
-			<string>FwRuntimeServices.efi</string>
+			<string>OpenCanopy.efi</string>
+			<string>OpenRuntime.efi</string>
 			<string>VBoxHfs.efi</string>
-			<string>BootLiquor.efi</string>
 		</array>
 		<key>Audio</key>
 		<dict>
