@@ -15,3 +15,7 @@ EFI/._BOOT
 EFI/._OC
 ._.gitignore
 ._README.md
+._Contents
+._Info.plist
+._MacOS
+.__CodeSignature
