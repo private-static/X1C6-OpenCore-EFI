@@ -20,7 +20,7 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
-				<string>SSDT-OC-XOSI.aml</string>
+				<string>SSDT-XOSI.aml</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -48,15 +48,23 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>ThinkPad呼吸灯</string>
+				<string>`EXT1` 扩展补丁,修复因 XHC 控制器导致的关机变重启的问题。</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
-				<string>SSDT-LEDReset.aml</string>
+				<string>SSDT-EXT1.aml</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string></string>
+				<string>`EXT3` 扩展补丁, 解决 TP 机器唤醒后呼吸灯未恢复正常的问题。</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>SSDT-EXT3.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>`EXT4` 扩展补丁,解决某些机器唤醒后需按任意键亮屏的问题。</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -106,7 +114,7 @@
 				<key>Comment</key>
 				<string>添加缺失部件：MCHC</string>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Path</key>
 				<string>SSDT-MCHC.aml</string>
 			</dict>
@@ -176,6 +184,14 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>SSDT-TBT3.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>ACPI Debug补丁</string>
 				<key>Enabled</key>
 				<false/>
@@ -194,9 +210,25 @@
 				<key>Comment</key>
 				<string>启用Type-C电源</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Path</key>
 				<string>SSDT-TYPC.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<false/>
+				<key>Path</key>
+				<string>SSDT-USBC.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<false/>
+				<key>Path</key>
+				<string>SSDT-TB3.aml</string>
 			</dict>
 		</array>
 		<key>Block</key>
@@ -224,6 +256,34 @@
 				<false/>
 				<key>OemTableId</key>
 				<data>Q3B1MElzdAA=</data>
+				<key>TableLength</key>
+				<integer>0</integer>
+				<key>TableSignature</key>
+				<data>U1NEVA==</data>
+			</dict>
+			<dict>
+				<key>All</key>
+				<false/>
+				<key>Comment</key>
+				<string>Drop TbtTypeC</string>
+				<key>Enabled</key>
+				<false/>
+				<key>OemTableId</key>
+				<data>VGJ0VHlwZUM=</data>
+				<key>TableLength</key>
+				<integer>0</integer>
+				<key>TableSignature</key>
+				<data>U1NEVA==</data>
+			</dict>
+			<dict>
+				<key>All</key>
+				<false/>
+				<key>Comment</key>
+				<string>Drop UsbCTabl</string>
+				<key>Enabled</key>
+				<false/>
+				<key>OemTableId</key>
+				<data>VXNiQ1RhYmw=</data>
 				<key>TableLength</key>
 				<integer>0</integer>
 				<key>TableSignature</key>

@@ -6,16 +6,4 @@ System Volume Information
 .Spotlight-V100
 .fseventsd
 .TemporaryItems/
-EFI/BOOT/._BOOTx64.efi
-EFI/OC/._OpenCore.efi
-EFI/OC/._config.plist
-EFI/OC/ACPI/._DSDT.aml
-._.git
-EFI/._BOOT
-EFI/._OC
-._.gitignore
-._README.md
-._Contents
-._Info.plist
-._MacOS
-.__CodeSignature
+._*
