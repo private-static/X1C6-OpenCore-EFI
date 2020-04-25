@@ -1988,6 +1988,8 @@
 			<true/>
 			<key>AuthRestart</key>
 			<false/>
+			<key>BootProtect</key>
+			<string>Bootstrap</string>
 			<key>ExposeSensitiveData</key>
 			<integer>11</integer>
 			<key>HaltLevel</key>
@@ -2167,15 +2169,15 @@
 			<key>AudioDevice</key>
 			<string>PciRoot(0x0)/Pci(0x1F,0x3)</string>
 			<key>AudioOut</key>
-			<integer>0</integer>
+			<integer>20</integer>
 			<key>AudioSupport</key>
-			<false/>
+			<true/>
 			<key>MinimumVolume</key>
 			<integer>0</integer>
 			<key>PlayChime</key>
-			<false/>
+			<true/>
 			<key>VolumeAmplifier</key>
-			<integer>0</integer>
+			<integer>1000</integer>
 		</dict>
 		<key>ConnectDrivers</key>
 		<true/>
@@ -2184,6 +2186,7 @@
 			<string>OpenCanopy.efi</string>
 			<string>OpenRuntime.efi</string>
 			<string>HFSPlus.efi</string>
+			<string>AudioDxe.efi</string>
 		</array>
 		<key>Input</key>
 		<dict>
@@ -2244,6 +2247,8 @@
 			<key>AppleImageConversion</key>
 			<false/>
 			<key>AppleKeyMap</key>
+			<false/>
+			<key>AppleRtcRam</key>
 			<false/>
 			<key>AppleSmcIo</key>
 			<true/>
