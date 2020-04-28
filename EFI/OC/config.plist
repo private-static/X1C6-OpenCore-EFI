@@ -184,6 +184,14 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>VoodooPS2 ThinkPad触摸板优化</string>
+				<key>Enabled</key>
+				<false/>
+				<key>Path</key>
+				<string>SSDT-ClickPad.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string></string>
 				<key>Enabled</key>
 				<false/>
@@ -2186,7 +2194,8 @@
 			<string>OpenCanopy.efi</string>
 			<string>OpenRuntime.efi</string>
 			<string>HFSPlus.efi</string>
-			<string>AudioDxe.efi</string>
+			<string>#AudioDxe.efi</string>
+			<string>Ps2KeyboardDxe.efi</string>
 		</array>
 		<key>Input</key>
 		<dict>
