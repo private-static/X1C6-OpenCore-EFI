@@ -224,7 +224,8 @@
 			</dict>
 		</array>
 		<key>Delete</key>
-		<array/>
+		<array>
+		</array>
 		<key>Patch</key>
 		<array>
 			<dict>
@@ -1355,6 +1356,8 @@
 			<false/>
 			<key>ProvideCustomSlide</key>
 			<true/>
+			<key>ProvideMaxSlide</key>
+			<integer>0</integer>
 			<key>RebuildAppleMemoryMap</key>
 			<false/>
 			<key>SetupVirtualMap</key>
@@ -1369,21 +1372,6 @@
 	<dict>
 		<key>Add</key>
 		<dict>
-			<key>PciRoot(0x0)/Pci(0x1C,0x2)/Pci(0x0,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>WLAN</string>
-				<key>compatible</key>
-				<string>pci14e4,4331</string>
-				<key>device_type</key>
-				<string>Airport Extreme</string>
-				<key>model</key>
-				<string>BCM4350 802.11ac Wireless Network Adapter</string>
-				<key>name</key>
-				<string>Airport</string>
-				<key>pci-aspm-default</key>
-				<integer>0</integer>
-			</dict>
 			<key>PciRoot(0x0)/Pci(0x1f,0x3)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
@@ -1654,7 +1642,7 @@
 				<key>Comment</key>
 				<string>Lilu plugin</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/NVMeFix</string>
 				<key>MaxKernel</key>
@@ -1734,7 +1722,7 @@
 				<key>Comment</key>
 				<string></string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>ExecutablePath</key>
 				<string></string>
 				<key>MaxKernel</key>
@@ -1750,7 +1738,7 @@
 				<key>Comment</key>
 				<string></string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/BrcmFirmwareData</string>
 				<key>MaxKernel</key>
@@ -1766,7 +1754,7 @@
 				<key>Comment</key>
 				<string></string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/BrcmPatchRAM3</string>
 				<key>MaxKernel</key>
@@ -1875,18 +1863,6 @@
 		</array>
 		<key>Block</key>
 		<array>
-			<dict>
-				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
-				<false/>
-				<key>Identifier</key>
-				<string>com.apple.driver.AppleTyMCEDriver</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-			</dict>
 		</array>
 		<key>Emulate</key>
 		<dict>
@@ -2199,8 +2175,6 @@
 			<true/>
 			<key>AuthRestart</key>
 			<false/>
-			<key>BlacklistAppleUpdate</key>
-			<true/>
 			<key>BootProtect</key>
 			<string>Bootstrap</string>
 			<key>ExposeSensitiveData</key>
@@ -2275,7 +2249,7 @@
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<dict>
 				<key>boot-args</key>
-				<string>debug=0x100 brcmfx-country=#a bpr_probedelay=100 bpr_initialdelay=300 bpr_postresetdelay=300</string>
+				<string>debug=0x100 brcmfx-country=#a</string>
 				<key>csr-active-config</key>
 				<data>5wMAAA==</data>
 				<key>prev-lang:kbd</key>
@@ -2366,6 +2340,8 @@
 		<dict>
 			<key>EnableJumpstart</key>
 			<true/>
+			<key>GlobalConnect</key>
+			<false/>
 			<key>HideVerbose</key>
 			<true/>
 			<key>JumpstartHotPlug</key>
