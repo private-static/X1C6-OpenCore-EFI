@@ -1640,7 +1640,7 @@
 				<key>Comment</key>
 				<string></string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/VoodooSMBus</string>
 				<key>MaxKernel</key>
@@ -1656,7 +1656,7 @@
 				<key>Comment</key>
 				<string></string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/VoodooRMI</string>
 				<key>MaxKernel</key>
@@ -2170,7 +2170,6 @@
 	<dict>
 		<key>BlessOverride</key>
 		<array>
-			<string>\System\Library\CoreServices\boot.efi</string>
 			<string>\EFI\Microsoft\Boot\bootmgfw.efi</string>
 		</array>
 		<key>Boot</key>
