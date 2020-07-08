@@ -3,6 +3,8 @@
 
 **无偿分享不提供小白指导，有问题请自行去远景或黑果小兵等大神的博客下面查阅资料。**
 
+**本EFI已经支持引导macOS 10.16 Big Sur，但仍有许多不完美的地方。**
+
 ### 机身配置
 - CPU：i7 7600u 2.80GHz
 - 显卡：HD620 2048MB
@@ -11,7 +13,7 @@
 - 显示器：友达B140QAN0-1.5 1440p 72%NTSC 300nits 
 - 无线网卡：已更换为白果拆机卡BCM94360CS2（原来是DW1820A联想版）
 
-### 正常工作的组件&功能：
+### 正常工作的组件/功能：
 - CPU变频、睿频
 - 亮度和音量快捷键
 - 扬声器、麦克风
@@ -21,8 +23,7 @@
 - 电源按键和A面呼吸灯，可正常指示唤醒或睡眠状态
 - USB端口（充电口旁边的USB3.0只能工作在2.0模式）
 - SD卡读卡器
-- 触控板，可模拟白果多点触控手势（基于VoodooPS2）
-- 小红点
+- 触控板，可模拟白果多点触控手势（从VoodooPS2改为VoodooRMI驱动，更流畅）， 小红点
 - Wi-Fi和蓝牙
 - HDMI 4K输出
 - 显示器HiDPI
@@ -30,24 +31,25 @@
 - 电池电量及充电状态的显示，以及系统偏好设置中的节能选项
 - 按下PrtSc键会禁用触摸板（VoodooPS2定义的，我认为是个feature而非bug就没有修改它）
 - 功能键F7-F12（使用[MSzturc](https://github.com/MSzturc)的[ThinkpadAssistant](https://github.com/MSzturc/ThinkpadAssistant)，配套的SSDT和二进制更名已经添加好）
+- USB-C热插拔（感谢[truongtam-fudosan](https://github.com/truongtam-fudosan)在issue中提供的[教程](https://www.elitemacx86.com/threads/guide-how-to-enable-thunderbolt-3-hotplug.462/)）	
 	
 	> 启用HiDPI：终端执行```bash -c "$(curl -fsSL https://raw.githubusercontent.com/xzhih/one-key-hidpi/master/hidpi.sh)"```
 	> 在脚本中选择与本机对应的分辨率，重启后缩放分辨率选择1440x810（或1424x802，对应1080p机型）。请勿选择更高的缩放分辨率，否则睡眠唤醒后出现显示错位或花屏。
+	> 10.16下请下载脚本到本地并删掉脚本中的“/System”。
 
-### 有问题的组件
-- 雷电3&USB-C端口，只能作为充电口（输入&输出）
-- 触摸板按键（三个按键都被定义为按住显示右键菜单）
+### 有问题的组件/功能
+- ~~雷电3&USB-C端口，只能作为充电口（输入&输出）~~
 - ~~网卡无法连接iPhone热点，更换白果免驱网卡可解决~~
+- ~~蓝牙在睡眠唤醒后可能无法连接，手动关闭再打开蓝牙即恢复正常。~~
+- 触摸板按键（三个按键都被定义为按住显示右键菜单，使用VoodooRMI时则被屏蔽）
+- 核显HEVC解码（头疼中，希望有人帮忙）
 
-### 无法使用的组件
+### 无法使用的组件/功能
 - 指纹识别模块（这个百分百无解的）
-
->  Tips：蓝牙在睡眠唤醒后可能无法连接，手动关闭再打开蓝牙即恢复正常。
-
->  Windows 10 insider最新的fast ring版本已经可以引导。
 
 ### 未经测试
 - WWAN（4G）模块
+- 雷电3热插拔
 
 ### Credits
 - [黑果小兵](https://github.com/daliansky) 的ACPI部件补丁仓库（同时向为该仓库作出贡献的大佬们致谢）
