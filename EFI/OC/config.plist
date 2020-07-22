@@ -72,15 +72,15 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>电池LPCB补丁(SSDT-OCBATC-LPCB.aml)</string>
+				<string>电池BATC补丁</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
-				<string>SSDT-OCBATC-LPCB.aml</string>
+				<string>SSDT-OCBATC-TP-_BIX.aml</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>双电池Notify</string>
+				<string>Notify补丁</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -1587,9 +1587,25 @@
 				<key>Comment</key>
 				<string>Input Engine</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/VoodooInput</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>BundlePath</key>
+				<string>NVMeFix.kext</string>
+				<key>Comment</key>
+				<string>Lilu plugin</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/NVMeFix</string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -1631,13 +1647,13 @@
 			</dict>
 			<dict>
 				<key>BundlePath</key>
-				<string>NVMeFix.kext</string>
+				<string>VoodooRMI.kext/Contents/PlugIns/VoodooInput.kext</string>
 				<key>Comment</key>
-				<string>Lilu plugin</string>
+				<string></string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
-				<string>Contents/MacOS/NVMeFix</string>
+				<string>Contents/MacOS/VoodooInput</string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
