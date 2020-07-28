@@ -176,7 +176,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>ThinkpadAssistant配套</string>
+				<string></string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -1371,9 +1371,11 @@
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
 				<key>AAPL,ig-platform-id</key>
-				<data>AAAWWQ==</data>
+				<data>CQAWWQ==</data>
 				<key>AAPL,slot-name</key>
 				<string>Built In</string>
+				<key>device-id</key>
+				<data>FlkACQ==</data>
 				<key>device_type</key>
 				<string>VGA compatible controller</string>
 				<key>enable-hdmi20</key>
@@ -1654,6 +1656,38 @@
 				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/VoodooInput</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>BundlePath</key>
+				<string>VoodooRMI.kext/Contents/PlugIns/RMISMBus.kext</string>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/RMISMBus</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>BundlePath</key>
+				<string>VoodooRMI.kext/Contents/PlugIns/VoodooTrackpoint.kext</string>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/VoodooTrackpoint</string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -2177,9 +2211,9 @@
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<dict>
 				<key>boot-args</key>
-				<string>-v debug=0x100 vsmcgen=1</string>
+				<string>-v debug=0x100</string>
 				<key>csr-active-config</key>
-				<data>5wMAAA==</data>
+				<data>5wsAAA==</data>
 				<key>prev-lang:kbd</key>
 				<data>AHpoLUhhbnM6MjUy</data>
 			</dict>
@@ -2303,7 +2337,7 @@
 			<string>OpenCanopy.efi</string>
 			<string>OpenRuntime.efi</string>
 			<string>HFSPlus.efi</string>
-			<string>TbtForcePower.efi</string>
+			<string>#TbtForcePower.efi</string>
 			<string>#AudioDxe.efi</string>
 		</array>
 		<key>Input</key>
