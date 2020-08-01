@@ -32,6 +32,14 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>SSDT-EC-USBX.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>PTS/WAK综合补丁</string>
 				<key>Enabled</key>
 				<true/>
@@ -176,7 +184,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string></string>
+				<string>ThinkpadAssistant配套</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -186,9 +194,17 @@
 				<key>Comment</key>
 				<string></string>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Path</key>
-				<string>SSDT-DTPG.aml</string>
+				<string>SSDT-DTGP.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>雷电&amp;USB-C设备信息</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>SSDT-TB3HP.aml</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -196,7 +212,15 @@
 				<key>Enabled</key>
 				<false/>
 				<key>Path</key>
-				<string>SSDT-Z390-TB3HP.aml</string>
+				<string>SSDT-RP01.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<false/>
+				<key>Path</key>
+				<string>SSDT-USBC.aml</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -208,7 +232,36 @@
 			</dict>
 		</array>
 		<key>Delete</key>
-		<array/>
+		<array>
+			<dict>
+				<key>All</key>
+				<false/>
+				<key>Comment</key>
+				<string>TbtTypeC</string>
+				<key>Enabled</key>
+				<true/>
+				<key>OemTableId</key>
+				<data>VGJ0VHlwZUM=</data>
+				<key>TableLength</key>
+				<integer>0</integer>
+				<key>TableSignature</key>
+				<data>U1NEVA==</data>
+			</dict>
+			<dict>
+				<key>All</key>
+				<false/>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>OemTableId</key>
+				<data>VXNiQ1RhYmw=</data>
+				<key>TableLength</key>
+				<integer>0</integer>
+				<key>TableSignature</key>
+				<data>U1NEVA==</data>
+			</dict>
+		</array>
 		<key>Patch</key>
 		<array>
 			<dict>
@@ -499,11 +552,11 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>_Q4C to XQ4C</string>
+				<string>_Q4C to XQ4C（七代无此method）</string>
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>X1E0Qw==</data>
 				<key>Limit</key>
@@ -1364,20 +1417,22 @@
 				<key>hda-gfx</key>
 				<string>onboard-1</string>
 				<key>layout-id</key>
-				<data>HQAAAA==</data>
+				<data>LwAAAA==</data>
 				<key>model</key>
 				<string>Realtek ALC298</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
 				<key>AAPL,ig-platform-id</key>
-				<data>CQAWWQ==</data>
+				<data>AAAWWQ==</data>
 				<key>AAPL,slot-name</key>
 				<string>Built In</string>
-				<key>device-id</key>
-				<data>FlkACQ==</data>
+				<key>AAPL00,override-no-connect</key>
+				<data>AP///////wAwrqpAAAAAAAAaAQSlHxF46tHlpFVOnSYSUFQAAAABAQEBAQEBAQEBAQEBAQEBHGEAyKCgPFAoIKoANa4QAAAYHGEAyKCgPFAAKCCqADWuEAAAGAAAAA8ABQk8BQk8HgoABq8AAAAAAP4AQjE0MFFBTjAxLjUgCgAjAA==</data>
 				<key>device_type</key>
 				<string>VGA compatible controller</string>
+				<key>enable-hdmi-dividers-fix</key>
+				<data>AQAAAA==</data>
 				<key>enable-hdmi20</key>
 				<data>AQAAAA==</data>
 				<key>framebuffer-con1-enable</key>
@@ -1396,6 +1451,8 @@
 				<data>AgAAAA==</data>
 				<key>framebuffer-stolenmem</key>
 				<data>AAAwAQ==</data>
+				<key>framebuffer-unifiedmem</key>
+				<data>AAAAgA==</data>
 				<key>model</key>
 				<string>Intel HD Graphics 620</string>
 			</dict>
@@ -1781,7 +1838,7 @@
 				<key>Comment</key>
 				<string></string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/USBInjectAll</string>
 				<key>MaxKernel</key>
@@ -1795,7 +1852,7 @@
 				<key>BundlePath</key>
 				<string>USBPorts.kext</string>
 				<key>Comment</key>
-				<string></string>
+				<string>注入USB端口</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -1813,7 +1870,7 @@
 				<key>Comment</key>
 				<string></string>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/IOElectrify</string>
 				<key>MaxKernel</key>
@@ -2077,7 +2134,7 @@
 			<key>ConsoleAttributes</key>
 			<integer>0</integer>
 			<key>HibernateMode</key>
-			<string>Auto</string>
+			<string>None</string>
 			<key>HideAuxiliary</key>
 			<true/>
 			<key>PickerAttributes</key>
@@ -2307,7 +2364,7 @@
 			<key>HideVerbose</key>
 			<true/>
 			<key>JumpstartHotPlug</key>
-			<false/>
+			<true/>
 			<key>MinDate</key>
 			<integer>0</integer>
 			<key>MinVersion</key>
@@ -2337,7 +2394,7 @@
 			<string>OpenCanopy.efi</string>
 			<string>OpenRuntime.efi</string>
 			<string>HFSPlus.efi</string>
-			<string>#TbtForcePower.efi</string>
+			<string>TbtForcePower.efi</string>
 			<string>#AudioDxe.efi</string>
 		</array>
 		<key>Input</key>
@@ -2405,7 +2462,7 @@
 			<key>AppleRtcRam</key>
 			<false/>
 			<key>AppleSmcIo</key>
-			<true/>
+			<false/>
 			<key>AppleUserInterfaceTheme</key>
 			<false/>
 			<key>DataHub</key>
