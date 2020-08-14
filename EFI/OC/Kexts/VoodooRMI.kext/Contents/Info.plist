@@ -47,7 +47,7 @@
 			<key>Configuration</key>
 			<dict>
 				<key>DisableWhileTypingTimeout</key>
-				<integer>200</integer>
+				<integer>800</integer>
 				<key>ForceTouchEmulation</key>
 				<true/>
 				<key>ForceTouchMinPressure</key>
