@@ -1,5 +1,8 @@
 # T470s-OpenCore-EFI
-联想T470s的OC引导EFI
+
+[![OpenCore](https://img.shields.io/badge/OpenCore-0.6.1-blue)](https://github.com/acidanthera/OpenCorePkg)
+
+Thinkpad T470s的OC引导EFI
 
 **无偿分享不提供小白指导，有问题请自行去远景或黑果小兵等大神的博客下面查阅资料。**
 
