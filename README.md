@@ -1,32 +1,31 @@
-# T470s-OpenCore-EFI
+# X1C6/T470s-OpenCore-EFI
 
 [![OpenCore](https://img.shields.io/badge/OpenCore-0.6.1-blue)](https://github.com/acidanthera/OpenCorePkg)
 
-Thinkpad T470s的OC引导EFI
+Thinkpad X1 Carbon 2018的OC引导EFI（T470s请使用config-t470s.plist)
 
 **无偿分享不提供小白指导，有问题请自行去远景或黑果小兵等大神的博客下面查阅资料。**
 
-**本EFI已经支持引导macOS 11.0 Big Sur，但仍有许多不完美的地方。**
+**本EFI已经支持引导macOS 11.0 Big Sur。**
 
 ### 机身配置
-- CPU：i7 7600U 2.80GHz
-- 显卡：HD620 1536MB
-- 内存：12GB DDR4 2133MHz（板载4+8）
+- CPU：i7 8550U 2.0GHz
+- 显卡：UHD620 1536MB
+- 内存：16GB LPDDR3 2133MHz
 - 硬盘：西部数据SN750 NVMe SSD 1TB
-- 显示器：友达B140QAN0-1.5 1440p 72%NTSC 300nits 
+- 显示器：友达B140HAN0-1.3 1080p 72%NTSC 300nits 
 - 无线网卡：已更换为白果拆机卡BCM94360CS2（原来是DW1820A联想版）
 
 ### 正常工作的组件/功能：
 - CPU变频、睿频
 - 亮度和音量快捷键
-- 扬声器（layout-id：47）、麦克风
+- 扬声器、麦克风
 - 前置摄像头
 - 模拟白果拔出电源屏幕会略微变暗，也可在系统偏好设置-节能中关闭此功能
 - 睡眠和唤醒（开启config中kernel部分的RTC相关patch解决RTC唤醒问题）
 - 电源按键和A面呼吸灯，可正常指示唤醒或睡眠状态
-- USB端口（充电口旁边的USB3.0只能工作在2.0模式）
-- SD卡读卡器
-- 触控板手势（从VoodooPS2改为VoodooRMI驱动，更流畅）、三个实体键、小红点
+- USB端口、micro SD读卡器
+- 触控板手势（使用VoodooRMI驱动，更流畅）、三个实体键、小红点
 - Wi-Fi和蓝牙
 - 显示器HiDPI
 - Apple watch解锁（依赖白果拆机网卡实现）
@@ -42,9 +41,7 @@ Thinkpad T470s的OC引导EFI
 ### 有问题的组件/功能
 - ~~雷电3&USB-C端口，只能作为充电口（输入&输出）~~
 - ~~网卡无法连接iPhone热点，更换白果免驱网卡可解决~~
-- ~~蓝牙在睡眠唤醒后可能无法连接，手动关闭再打开蓝牙即恢复正常。~~
-- ~~触摸板按键（三个按键都被定义为按住显示右键菜单，使用VoodooRMI时则被屏蔽）~~
-- 核显HEVC解码和HDMI输出（10.15下可用，11.0不行，也许是beta1更新不完整导致的，本机已回退10.15.6）
+- ~~蓝牙在睡眠唤醒后可能无法连接，手动关闭再打开蓝牙即恢复正常。（使用DW1820A时出现）~~
 
 ### 无法使用的组件/功能
 - 指纹识别模块
