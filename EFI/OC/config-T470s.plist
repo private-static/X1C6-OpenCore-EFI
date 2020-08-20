@@ -136,14 +136,6 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>亮度快捷键</string>
-				<key>Enabled</key>
-				<false/>
-				<key>Path</key>
-				<string>SSDT-BKey.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>Fn+F4睡眠补丁</string>
 				<key>Enabled</key>
 				<true/>
@@ -197,6 +189,14 @@
 				<true/>
 				<key>Path</key>
 				<string>SSDT-TB3HP.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>亮度快捷键</string>
+				<key>Enabled</key>
+				<false/>
+				<key>Path</key>
+				<string>SSDT-BKey.aml</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
