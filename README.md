@@ -1,6 +1,6 @@
 # X1C6/T470s-OpenCore-EFI
 
-[![OpenCore](https://img.shields.io/badge/OpenCore-0.6.1-blue)](https://github.com/acidanthera/OpenCorePkg)
+[![OpenCore](https://img.shields.io/badge/OpenCore-0.6.1-blue)](https://github.com/acidanthera/OpenCorePkg)[![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
 
 Thinkpad X1 Carbon 2018的OC引导EFI（T470s请使用config-t470s.plist)
 
@@ -13,7 +13,7 @@ Thinkpad X1 Carbon 2018的OC引导EFI（T470s请使用config-t470s.plist)
 - 显卡：UHD620 1536MB
 - 内存：16GB LPDDR3 2133MHz
 - 硬盘：西部数据SN750 NVMe SSD 1TB
-- 显示器：友达B140HAN0-1.3 1080p 72%NTSC 300nits 
+- 显示器：友达B140HAN02.0 1440p 500nits 
 - 无线网卡：已更换为白果拆机卡BCM94360CS2（原来是DW1820A联想版）
 
 ### 正常工作的组件/功能：
@@ -24,7 +24,7 @@ Thinkpad X1 Carbon 2018的OC引导EFI（T470s请使用config-t470s.plist)
 - 模拟白果拔出电源屏幕会略微变暗，也可在系统偏好设置-节能中关闭此功能
 - 睡眠和唤醒（开启config中kernel部分的RTC相关patch解决RTC唤醒问题）
 - 电源按键和A面呼吸灯，可正常指示唤醒或睡眠状态
-- USB端口、micro SD读卡器
+- USB端口、microSD读卡器
 - 触控板手势（使用VoodooRMI驱动，更流畅）、三个实体键、小红点
 - Wi-Fi和蓝牙
 - 显示器HiDPI
