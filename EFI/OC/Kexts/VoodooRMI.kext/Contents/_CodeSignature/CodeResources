@@ -10,37 +10,37 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			WwNf7HcErCFyomeF50kGsRnMqA0=
+			0XEr6/3S8yXQ2x6kERfa9C4QcoU=
 			</data>
 			<key>requirement</key>
-			<string>cdhash H"9cd0cea4f3ed140b644517ba03f1c06c7fdbe503" or cdhash H"5b035fec7704ac2172a26785e74906b119cca80d" or cdhash H"bd569bb2ab8219675e4aa37f839d982e4fde329e" or cdhash H"4e86c9ab7632c548b2496a3ab901efbe404f914b"</string>
+			<string>cdhash H"ac351784404d40ed4a324e85ada64c75341df06e" or cdhash H"d1712bebfdd2f325d0db1ea41117daf42e107285"</string>
 		</dict>
 		<key>PlugIns/RMISMBus.kext</key>
 		<dict>
 			<key>cdhash</key>
 			<data>
-			wXTcVJIHl+vcjfHbeKOuE85PsNE=
+			JJ/kZuPkCO/E/1yYfyD6Bm+GCHU=
 			</data>
 			<key>requirement</key>
-			<string>cdhash H"a53829ea497fa6807bc106902b8727f14e4753a0" or cdhash H"c174dc54920797ebdc8df1db78a3ae13ce4fb0d1" or cdhash H"d87c63e23e8d2a90b4bed11e86bdc03fe367bb2c" or cdhash H"50d50b6fb818138f474f2179920da534bbbcbc1e"</string>
+			<string>cdhash H"1db21876a470d6d422b2d5eeae9faf4cf6b9cf43" or cdhash H"249fe466e3e408efc4ff5c987f20fa066f860875"</string>
 		</dict>
 		<key>PlugIns/VoodooInput.kext</key>
 		<dict>
 			<key>cdhash</key>
 			<data>
-			UETy0paWrc9jZxd2uD75YTnmvOE=
+			IWkgOX6LeRknWddRTVZYrCxwYDg=
 			</data>
 			<key>requirement</key>
-			<string>cdhash H"486fc825c5f5d9c38e3a0c51f3a217863c8f9856" or cdhash H"5044f2d29696adcf63671776b83ef96139e6bce1"</string>
+			<string>cdhash H"5823588c602d162972db779fc946e2b352b55ff6" or cdhash H"216920397e8b79192759d7514d5658ac2c706038"</string>
 		</dict>
 		<key>PlugIns/VoodooTrackpoint.kext</key>
 		<dict>
 			<key>cdhash</key>
 			<data>
-			7emha0o7R8q8SyzHSLrTPq255qw=
+			AIcQ+GiFs7cNJTCINbpi9ZgMS3Y=
 			</data>
 			<key>requirement</key>
-			<string>cdhash H"0e56e88aaa414f6e9c4e0761edae065f166a727e" or cdhash H"ede9a16b4a3b47cabc4b2cc748bad33eadb9e6ac" or cdhash H"6d87db49c3c6b5e5f9bf3f752e50b78a71a71826" or cdhash H"5b9ac088215186efb446cc1d30e605614737ca9a"</string>
+			<string>cdhash H"9f555e5211a84a46a27b3ed2b1751ce6dff4b464" or cdhash H"008710f86885b3b70d25308835ba62f5980c4b76"</string>
 		</dict>
 	</dict>
 	<key>rules</key>

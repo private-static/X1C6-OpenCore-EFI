@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>20A5364e</string>
+	<string>17G14019</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -27,19 +27,17 @@
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
-	<string>12A8189n</string>
-	<key>DTPlatformName</key>
-	<string>macosx</string>
+	<string>9F2000</string>
 	<key>DTPlatformVersion</key>
-	<string>11.0</string>
+	<string>GM</string>
 	<key>DTSDKBuild</key>
-	<string>20A5354g</string>
+	<string>17E189</string>
 	<key>DTSDKName</key>
-	<string>macosx11.0</string>
+	<string>macosx10.13</string>
 	<key>DTXcode</key>
-	<string>1200</string>
+	<string>0941</string>
 	<key>DTXcodeBuild</key>
-	<string>12A8189n</string>
+	<string>9F2000</string>
 	<key>IOKitPersonalities</key>
 	<dict>
 		<key>VoodooSMBusControllerDriver</key>
@@ -53,10 +51,10 @@
 			<string>de.leo-labs.VoodooSMBus</string>
 			<key>IOClass</key>
 			<string>VoodooSMBusControllerDriver</string>
-			<key>IOPCIMatch</key>
-			<string>0x9d238086 0xa3238086</string>
+			<key>IOPCIClassMatch</key>
+			<string>0c050000&amp;0xffffff00</string>
 			<key>IOPCIMatchComment</key>
-			<string>Intel SMBus Controller i80 (9d23: Sunrise Point-LP (PCH), a323: Cannon Lake-H (PCH))</string>
+			<string>Intel SMBus Controller i801 (Class 0x0C05)</string>
 			<key>IOProbeScore</key>
 			<integer>400</integer>
 			<key>IOProviderClass</key>
@@ -78,8 +76,6 @@
 			<string>IOPCIDevice</string>
 		</dict>
 	</dict>
-	<key>LSMinimumSystemVersion</key>
-	<string>10.14</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2019 leo-labs. All rights reserved.</string>
 	<key>OSBundleCompatibleVersion</key>
