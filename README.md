@@ -1,6 +1,6 @@
 # X1C6/T470s-OpenCore-EFI
 
-[![OpenCore](https://img.shields.io/badge/OpenCore-0.6.1-blue)](https://github.com/acidanthera/OpenCorePkg)[![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
+[![OpenCore](https://img.shields.io/badge/OpenCore-0.6.3-blue)](https://github.com/acidanthera/OpenCorePkg)[![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
 
 Thinkpad X1 Carbon 2018的OC引导EFI（T470s请使用config-t470s.plist)
 
