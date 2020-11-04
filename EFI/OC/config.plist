@@ -58,7 +58,7 @@
 				<key>Comment</key>
 				<string>多合一睡眠补丁，包含了PWRB</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Path</key>
 				<string>SSDT-Sleep.aml</string>
 			</dict>
@@ -90,6 +90,14 @@
 				<key>Comment</key>
 				<string>ThinkpadAssistant配套功能键补丁</string>
 				<key>Enabled</key>
+				<false/>
+				<key>Path</key>
+				<string>SSDT-Keyboard-Legacy.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>新的键盘补丁（配合YogaSMC）</string>
+				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
 				<string>SSDT-Keyboard.aml</string>
@@ -106,15 +114,23 @@
 				<key>Comment</key>
 				<string>Comprehensive Sleep/ Wake Patch (Needs PTSWAK.plist)</string>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Path</key>
 				<string>SSDT-PTSWAK.aml</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>Enables DYTC thermal-management on newer Thinkpads</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>SSDT-DYTC.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>Fix Reboot after Shutdown</string>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Path</key>
 				<string>SSDT-EXT1.aml</string>
 			</dict>
@@ -122,7 +138,7 @@
 				<key>Comment</key>
 				<string>PTSWAK EXT4</string>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Path</key>
 				<string>SSDT-EXT4.aml</string>
 			</dict>
@@ -130,7 +146,7 @@
 				<key>Comment</key>
 				<string>Fix Instant Wake (Need GPRW.plist)</string>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Path</key>
 				<string>SSDT-GPRW.aml</string>
 			</dict>
@@ -154,7 +170,7 @@
 				<key>Comment</key>
 				<string>添加缺失部件：PWRB</string>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Path</key>
 				<string>SSDT-PWRB.aml</string>
 			</dict>
@@ -205,6 +221,14 @@
 				<false/>
 				<key>Path</key>
 				<string>SSDT-OCBAT0-TP_tx80_x1c6th.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>SSDT-EC.aml</string>
 			</dict>
 		</array>
 		<key>Delete</key>
@@ -269,7 +293,7 @@
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>R1BSVwI=</data>
 				<key>Limit</key>
@@ -451,7 +475,7 @@
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>X1E2QQ==</data>
 				<key>Limit</key>
@@ -477,7 +501,7 @@
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>X1ExNg==</data>
 				<key>Limit</key>
@@ -503,7 +527,7 @@
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>X1E2NA==</data>
 				<key>Limit</key>
@@ -529,7 +553,7 @@
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>X1E2Ng==</data>
 				<key>Limit</key>
@@ -555,7 +579,7 @@
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>X1E2MA==</data>
 				<key>Limit</key>
@@ -581,7 +605,7 @@
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>X1E2MQ==</data>
 				<key>Limit</key>
@@ -607,7 +631,7 @@
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>X1E2Mg==</data>
 				<key>Limit</key>
@@ -633,7 +657,7 @@
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>X1ExRg==</data>
 				<key>Limit</key>
@@ -659,7 +683,7 @@
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>X1E3NA==</data>
 				<key>Limit</key>
@@ -763,7 +787,7 @@
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>BkdQUlcCcA==</data>
 				<key>Limit</key>
@@ -789,7 +813,7 @@
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>X1dBSwk=</data>
 				<key>Limit</key>
@@ -1299,6 +1323,24 @@
 				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/HibernationFixup</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
+				<key>BundlePath</key>
+				<string>YogaSMC.kext</string>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/YogaSMC</string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
