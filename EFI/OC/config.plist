@@ -16,7 +16,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Initialize system variables</string>
+				<string>初始化系统参数，禁用HPET等</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -26,7 +26,7 @@
 				<key>Comment</key>
 				<string>操作系统补丁</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Path</key>
 				<string>SSDT-XOSI.aml</string>
 			</dict>
@@ -56,9 +56,9 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>多合一睡眠补丁，包含了PWRB</string>
+				<string>多合一睡眠补丁（包含SSDT-PWRB）</string>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Path</key>
 				<string>SSDT-Sleep.aml</string>
 			</dict>
@@ -88,14 +88,6 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>ThinkpadAssistant配套功能键补丁</string>
-				<key>Enabled</key>
-				<false/>
-				<key>Path</key>
-				<string>SSDT-Keyboard-Legacy.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>新的键盘补丁（配合YogaSMC）</string>
 				<key>Enabled</key>
 				<true/>
@@ -104,19 +96,19 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>TP Light Sleep/Wake Fix</string>
+				<string>YogaSMC配套补丁（包含SSDT-ECRW、SSDT-THINK）</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
-				<string>SSDT-LED.aml</string>
+				<string>SSDT-EC.aml</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Comprehensive Sleep/ Wake Patch (Needs PTSWAK.plist)</string>
+				<string>TP Light Sleep/Wake Fix</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Path</key>
-				<string>SSDT-PTSWAK.aml</string>
+				<string>SSDT-LED.aml</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -128,9 +120,17 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>Comprehensive Sleep/ Wake Patch (Needs PTSWAK.plist)</string>
+				<key>Enabled</key>
+				<false/>
+				<key>Path</key>
+				<string>SSDT-PTSWAK.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>Fix Reboot after Shutdown</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Path</key>
 				<string>SSDT-EXT1.aml</string>
 			</dict>
@@ -138,7 +138,7 @@
 				<key>Comment</key>
 				<string>PTSWAK EXT4</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Path</key>
 				<string>SSDT-EXT4.aml</string>
 			</dict>
@@ -146,7 +146,7 @@
 				<key>Comment</key>
 				<string>Fix Instant Wake (Need GPRW.plist)</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Path</key>
 				<string>SSDT-GPRW.aml</string>
 			</dict>
@@ -170,7 +170,7 @@
 				<key>Comment</key>
 				<string>添加缺失部件：PWRB</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Path</key>
 				<string>SSDT-PWRB.aml</string>
 			</dict>
@@ -216,19 +216,19 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>ThinkpadAssistant配套功能键补丁</string>
+				<key>Enabled</key>
+				<false/>
+				<key>Path</key>
+				<string>SSDT-Keyboard-Legacy.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>旧的Thinkpad电池补丁（需要配合ACPI patch）</string>
 				<key>Enabled</key>
 				<false/>
 				<key>Path</key>
 				<string>SSDT-OCBAT0-TP_tx80_x1c6th.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-EC.aml</string>
 			</dict>
 		</array>
 		<key>Delete</key>
@@ -293,7 +293,7 @@
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>R1BSVwI=</data>
 				<key>Limit</key>
@@ -445,7 +445,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>_WAK to ZWAK(1,S)</string>
+				<string>S3 Sleep: _WAK to ZWAK(1,S)</string>
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
@@ -460,6 +460,32 @@
 				<data></data>
 				<key>Replace</key>
 				<data>WldBSwk=</data>
+				<key>ReplaceMask</key>
+				<data></data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+				<key>TableSignature</key>
+				<data>RFNEVA==</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>S3 Sleep: GPRW to ZPRW</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data>BkdQUlcCcA==</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data></data>
+				<key>OemTableId</key>
+				<data></data>
+				<key>Replace</key>
+				<data>BlpQUlcCcA==</data>
 				<key>ReplaceMask</key>
 				<data></data>
 				<key>Skip</key>
@@ -772,58 +798,6 @@
 				<data></data>
 				<key>Replace</key>
 				<data>RUNfX1hXQUM=</data>
-				<key>ReplaceMask</key>
-				<data></data>
-				<key>Skip</key>
-				<integer>0</integer>
-				<key>TableLength</key>
-				<integer>0</integer>
-				<key>TableSignature</key>
-				<data>RFNEVA==</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>S3 Sleep: GPRW to ZPRW</string>
-				<key>Count</key>
-				<integer>0</integer>
-				<key>Enabled</key>
-				<false/>
-				<key>Find</key>
-				<data>BkdQUlcCcA==</data>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data></data>
-				<key>OemTableId</key>
-				<data></data>
-				<key>Replace</key>
-				<data>BlpQUlcCcA==</data>
-				<key>ReplaceMask</key>
-				<data></data>
-				<key>Skip</key>
-				<integer>0</integer>
-				<key>TableLength</key>
-				<integer>0</integer>
-				<key>TableSignature</key>
-				<data>RFNEVA==</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>S3 Sleep: _WAK to ZWAK(1,S)</string>
-				<key>Count</key>
-				<integer>0</integer>
-				<key>Enabled</key>
-				<false/>
-				<key>Find</key>
-				<data>X1dBSwk=</data>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data></data>
-				<key>OemTableId</key>
-				<data></data>
-				<key>Replace</key>
-				<data>WldBSwk=</data>
 				<key>ReplaceMask</key>
 				<data></data>
 				<key>Skip</key>
@@ -1458,7 +1432,7 @@
 			</dict>
 			<dict>
 				<key>Arch</key>
-				<string>Any</string>
+				<string>x86_64</string>
 				<key>BundlePath</key>
 				<string>ThunderboltReset.kext</string>
 				<key>Comment</key>
@@ -1547,6 +1521,8 @@
 			<false/>
 			<key>ExternalDiskIcons</key>
 			<false/>
+			<key>ForceSecureBootScheme</key>
+			<false/>
 			<key>IncreasePciBarSize</key>
 			<false/>
 			<key>LapicKernelPanic</key>
@@ -1632,6 +1608,8 @@
 			<integer>0</integer>
 			<key>AuthRestart</key>
 			<false/>
+			<key>BlacklistAppleUpdate</key>
+			<true/>
 			<key>BootProtect</key>
 			<string>Bootstrap</string>
 			<key>DmgLoading</key>
@@ -1664,6 +1642,8 @@
 			<dict>
 				<key>UIScale</key>
 				<data>Ag==</data>
+				<key>run-efi-updater</key>
+				<string>No</string>
 			</dict>
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<dict>
@@ -1673,6 +1653,8 @@
 				<data>5wsAAA==</data>
 				<key>prev-lang:kbd</key>
 				<data>AHpoLUhhbnM6MjUy</data>
+				<key>run-efi-updater</key>
+				<string>No</string>
 			</dict>
 		</dict>
 		<key>Delete</key>
@@ -1739,7 +1721,7 @@
 			<key>SpoofVendor</key>
 			<true/>
 			<key>SystemProductName</key>
-			<string>MacBookPro14,2</string>
+			<string>MacBookPro14,1</string>
 			<key>SystemSerialNumber</key>
 			<string>C02T7GYQHV2N</string>
 			<key>SystemUUID</key>
