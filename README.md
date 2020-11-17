@@ -1,8 +1,8 @@
-# X1C6/T470s-OpenCore-EFI
+# X1C6-OpenCore-EFI
 
-[![OpenCore](https://img.shields.io/badge/OpenCore-0.6.3-blue)](https://github.com/acidanthera/OpenCorePkg)[![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
+[![OpenCore](https://img.shields.io/badge/OpenCore-0.6.4-blue)](https://github.com/acidanthera/OpenCorePkg)[![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
 
-Thinkpad X1 Carbon 2018的OC引导EFI（T470s请使用config-t470s.plist)
+Thinkpad X1 Carbon 2018的OC引导EFI（需要T470s版本请自行checkout）
 
 **无偿分享不提供小白指导，有问题请自行去远景或黑果小兵等大神的博客下面查阅资料。**
 
@@ -26,7 +26,8 @@ Thinkpad X1 Carbon 2018的OC引导EFI（T470s请使用config-t470s.plist)
 - 多媒体设备
   - 扬声器、麦克风、耳机接口
   - 前置摄像头
-  - HDMI输出（1080p 60p）
+  - HDMI输出（1080p 60fps）
+  - Type-C视频输出（应该是走DP通道，可以到4k 60fps）
 - 输入输出设备
   - 触摸板（含实体三键）、小红点
   - USB3.0、USB3.1（Type-C）、microSD读卡器
@@ -51,13 +52,13 @@ Thinkpad X1 Carbon 2018的OC引导EFI（T470s请使用config-t470s.plist)
 
 ### 未经测试
 
-- WWAN（4G）模块
+- WWAN（4G）模块（低配机型没有天线）
 - 雷电3热插拔
 
 ### 提示
 - 一些SSDT文件名与config中添加的文件名有少许不同，可能导致引导OC失败，请自行核对
 - 启用HiDPI：终端执行```bash -c "$(curl -fsSL https://raw.githubusercontent.com/xzhih/one-key-hidpi/master/hidpi.sh)"```
-- 在macOS Big Sur上，HiDPI脚本需要删掉```/System```才能正常生效
+- ~~在macOS Big Sur上，HiDPI脚本需要删掉```/System```才能正常生效~~
 
 ### Credits
 - [黑果小兵](https://github.com/daliansky) 的ACPI部件补丁仓库（同时向为该仓库作出贡献的大佬们致谢）
