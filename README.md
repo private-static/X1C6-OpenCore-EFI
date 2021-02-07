@@ -1,19 +1,20 @@
 # X1C6-OpenCore-EFI
 
-[![OpenCore](https://img.shields.io/badge/OpenCore-0.6.4-blue)](https://github.com/acidanthera/OpenCorePkg)[![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
+[![OpenCore](https://img.shields.io/badge/OpenCore-0.6.7-blue)](https://github.com/acidanthera/OpenCorePkg)[![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
 
 Thinkpad X1 Carbon 2018的OC引导EFI（需要T470s版本请自行checkout）
 
 **无偿分享不提供小白指导，有问题请自行去远景或黑果小兵等大神的博客下面查阅资料。**
 
-**本EFI已经支持引导macOS 11.0 Big Sur。**
+**本EFI完全支持引导macOS 11.0 Big Sur。**
 
 ### 机身配置
+
 - CPU：i7 8550U 2.0GHz
 - 显卡：UHD620 1536MB
 - 内存：16GB LPDDR3 2133MHz
 - 硬盘：西部数据SN750 NVMe SSD 1TB
-- 显示器：友达B140HAN02.0 1440p 500nits 
+- 显示器：京东方NV140QUM-N53 4k 500nits 
 - 无线网卡：intel AX200
 
 ### 正常工作的组件/功能：
@@ -37,7 +38,7 @@ Thinkpad X1 Carbon 2018的OC引导EFI（需要T470s版本请自行checkout）
   - 电量显示、节能五项
   - 触摸板多指手势（使用VoodooRMI驱动，更流畅）
   - 电源按键和A面呼吸灯，可正常指示唤醒或睡眠状态
-  - Apple watch解锁（依赖白果拆机网卡实现）
+  - Apple watch解锁（仅白果拆机网卡可用）、接力（Intel网卡也可用）
   - F4、F7、F8、F9、F10、F11、F12键对应功能（使用[zhen-zen](https://github.com/zhen-zen)编写的[YogaSMC](https://github.com/zhen-zen/YogaSMC)，无需额外的SSDT和ACPI更名）
 
 ### 有问题的组件/功能
@@ -45,9 +46,10 @@ Thinkpad X1 Carbon 2018的OC引导EFI（需要T470s版本请自行checkout）
 - ~~雷电3&USB-C端口，只能作为充电口（输入&输出）~~
 - ~~网卡无法连接iPhone热点，更换白果免驱网卡可解决~~
 - ~~蓝牙在睡眠唤醒后可能无法连接，手动关闭再打开蓝牙即恢复正常。（使用DW1820A时出现）~~
-- 使用intel网卡时，Wi-Fi只支持802.11n速率，隔空投送、接力、Apple Watch解锁不可用
+- intel网卡目前支持802.11n 300Mbps速率，日常使用体验良好，隔空投送、Apple Watch解锁不可用
 
 ### 无法使用的组件/功能
+
 - 指纹识别模块
 
 ### 未经测试
@@ -58,7 +60,7 @@ Thinkpad X1 Carbon 2018的OC引导EFI（需要T470s版本请自行checkout）
 ### 提示
 - 一些SSDT文件名与config中添加的文件名有少许不同，可能导致引导OC失败，请自行核对
 - 启用HiDPI：终端执行```bash -c "$(curl -fsSL https://raw.githubusercontent.com/xzhih/one-key-hidpi/master/hidpi.sh)"```
-- ~~在macOS Big Sur上，HiDPI脚本需要删掉```/System```才能正常生效~~
+- 4k面板原生支持开启HiDPI，无需执行脚本
 
 ### Credits
 - [黑果小兵](https://github.com/daliansky) 的ACPI部件补丁仓库（同时向为该仓库作出贡献的大佬们致谢）
