@@ -8,7 +8,7 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>封装了_OSI和DTPG两个Method</string>
+				<string>封装了_OSI和DTGP两个Method</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -32,7 +32,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>注入x86</string>
+				<string>注入x86（DTGP放到了SSDT-Darwin）</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -72,9 +72,9 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>注入SBUS</string>
+				<string>注入SBUS（和VoodooRMI可能有兼容问题）</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Path</key>
 				<string>SSDT-SBUS.aml</string>
 			</dict>
@@ -104,14 +104,6 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Enables DYTC thermal-management on newer Thinkpads</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-DYTC.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>添加缺失部件：DMAC</string>
 				<key>Enabled</key>
 				<true/>
@@ -136,9 +128,9 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>添加缺失部件：MCHC</string>
+				<string>添加缺失部件：MCHC（和VoodooRMI可能有兼容问题）</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Path</key>
 				<string>SSDT-MCHC.aml</string>
 			</dict>
@@ -219,6 +211,110 @@
 		<array/>
 		<key>Patch</key>
 		<array>
+			<dict>
+				<key>Comment</key>
+				<string>TP-BAT:AJTP03 to XJTP03</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>QUpUUAM=</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data></data>
+				<key>OemTableId</key>
+				<data></data>
+				<key>Replace</key>
+				<data>WEpUUAM=</data>
+				<key>ReplaceMask</key>
+				<data></data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+				<key>TableSignature</key>
+				<data></data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>TP-BAT:GBST04 to XBST04</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>R0JTVAQ=</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data></data>
+				<key>OemTableId</key>
+				<data></data>
+				<key>Replace</key>
+				<data>WEJTVAQ=</data>
+				<key>ReplaceMask</key>
+				<data></data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+				<key>TableSignature</key>
+				<data></data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>TP-BAT:GBIX03 to XBIX03</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>R0JJWAM=</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data></data>
+				<key>OemTableId</key>
+				<data></data>
+				<key>Replace</key>
+				<data>WEJJWAM=</data>
+				<key>ReplaceMask</key>
+				<data></data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+				<key>TableSignature</key>
+				<data></data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>TP-BAT:GBIF03 to XBIF03</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>R0JJRgM=</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data></data>
+				<key>OemTableId</key>
+				<data></data>
+				<key>Replace</key>
+				<data>WEJJRgM=</data>
+				<key>ReplaceMask</key>
+				<data></data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+				<key>TableSignature</key>
+				<data></data>
+			</dict>
 			<dict>
 				<key>Comment</key>
 				<string>Name6D-03 to 00</string>
@@ -535,7 +631,7 @@
 				<key>Comment</key>
 				<string>Thunderbolt 3:  RP09:_PS3 to RP09:XPS3</string>
 				<key>Count</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
@@ -1514,6 +1610,8 @@
 		<true/>
 		<key>UpdateSMBIOSMode</key>
 		<string>Create</string>
+		<key>UseRawUuidEncoding</key>
+		<false/>
 	</dict>
 	<key>UEFI</key>
 	<dict>
