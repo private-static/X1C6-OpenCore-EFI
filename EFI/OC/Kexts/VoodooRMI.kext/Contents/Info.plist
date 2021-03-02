@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>20D64</string>
+	<string>20E5186d</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -49,9 +49,9 @@
 			<key>Configuration</key>
 			<dict>
 				<key>DisableWhileTrackpointTimeout </key>
-				<integer>2000</integer>
+				<integer>250</integer>
 				<key>DisableWhileTypingTimeout</key>
-				<integer>2000</integer>
+				<integer>250</integer>
 				<key>FingerMajorMinorDiffMax</key>
 				<integer>3</integer>
 				<key>ForceTouchEmulation</key>
