@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>20E5172i</string>
+	<string>20E5224a</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -162,6 +162,21 @@
 					<string>INTC1054</string>
 				</dict>
 			</array>
+			<key>IOProviderClass</key>
+			<string>IOACPIPlatformDevice</string>
+			<key>IOUserClientClass</key>
+			<string>YogaSMCUserClient</string>
+		</dict>
+		<key>YogaVPC</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>org.zhen.YogaSMC</string>
+			<key>IOClass</key>
+			<string>YogaVPC</string>
+			<key>IONameMatch</key>
+			<string>VPC0000</string>
+			<key>IOProbeScore</key>
+			<integer>200</integer>
 			<key>IOProviderClass</key>
 			<string>IOACPIPlatformDevice</string>
 			<key>IOUserClientClass</key>
