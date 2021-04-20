@@ -1,12 +1,12 @@
 # X1C6-OpenCore-EFI
 
-[![OpenCore](https://img.shields.io/badge/OpenCore-0.6.7-blue)](https://github.com/acidanthera/OpenCorePkg)[![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
+[![OpenCore](https://img.shields.io/badge/OpenCore-0.6.9-blue)](https://github.com/acidanthera/OpenCorePkg)[![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
 
 Thinkpad X1 Carbon 2018的OC引导EFI（需要T470s版本请自行checkout）
 
 **无偿分享不提供小白指导，有问题请自行去远景或黑果小兵等大神的博客下面查阅资料。**
 
-**本EFI完全支持引导macOS 11.0 Big Sur。**
+**本EFI支持引导macOS 11.0 Big Sur。**
 
 ### 机身配置
 
@@ -18,6 +18,7 @@ Thinkpad X1 Carbon 2018的OC引导EFI（需要T470s版本请自行checkout）
 - 无线网卡：intel AX200
 
 ### 正常工作的组件/功能：
+
 - 核心硬件
   - CPU变频、睿频
   - intel核显，HEVC编解码
@@ -34,19 +35,20 @@ Thinkpad X1 Carbon 2018的OC引导EFI（需要T470s版本请自行checkout）
   - USB3.0、USB3.1（Type-C）、microSD读卡器
 - 重要功能
   - 亮度和音量快捷键
-  - 睡眠和唤醒
+  - S3睡眠和唤醒
   - 电量显示、节能五项
   - 触摸板多指手势（使用VoodooRMI驱动，更流畅）
   - 电源按键和A面呼吸灯，可正常指示唤醒或睡眠状态
-  - Apple watch解锁（仅白果拆机网卡可用）、接力（Intel网卡也可用）
-  - F4、F7、F8、F9、F10、F11、F12键对应功能（使用[zhen-zen](https://github.com/zhen-zen)编写的[YogaSMC](https://github.com/zhen-zen/YogaSMC)，无需额外的SSDT和ACPI更名）
+  - Apple watch解锁（仅白果拆机网卡可用）、接力
+  - F4、F7、F8、F9、F10、F11、F12键对应功能（使用YogaSMC取代ThinkpadAssistant，无需额外的SSDT和ACPI更名）
+  - 最新的AirportItlwm 2.0.0已实现对802.11ac和ax的支持，但ax200连接redmi ax5路由器实测支持802.11ac 867Mbps
 
 ### 有问题的组件/功能
 
 - ~~雷电3&USB-C端口，只能作为充电口（输入&输出）~~
 - ~~网卡无法连接iPhone热点，更换白果免驱网卡可解决~~
 - ~~蓝牙在睡眠唤醒后可能无法连接，手动关闭再打开蓝牙即恢复正常。（使用DW1820A时出现）~~
-- intel网卡目前支持802.11n 300Mbps速率，日常使用体验良好，隔空投送、Apple Watch解锁不可用
+- intel网卡隔空投送、Apple Watch解锁不可用
 
 ### 无法使用的组件/功能
 
@@ -63,8 +65,10 @@ Thinkpad X1 Carbon 2018的OC引导EFI（需要T470s版本请自行checkout）
 - 4k面板原生支持开启HiDPI，无需执行脚本
 
 ### Credits
+
 - [黑果小兵](https://github.com/daliansky) 的ACPI部件补丁仓库（同时向为该仓库作出贡献的大佬们致谢）
 - [Acidanthera](https://github.com/acidanthera) 维护的OpenCore引导，Lilu、WhateverGreen、AppleALC等核心驱动
-- [MSzturc](https://github.com/MSzturc) 编写的[ThinkpadAssistant](https://github.com/MSzturc/ThinkpadAssistant)和ACPI补丁
+- [zxystd](https://github.com/zxystd)编写的[itlwm](https://github.com/OpenIntelWireless/itlwm)（intel Wi-Fi）
 - [zhen-zen](https://github.com/zhen-zen)编写的[YogaSMC](https://github.com/zhen-zen/YogaSMC)和SSDT sample
 - [tylernguyen](https://github.com/tylernguyen)维护的[x1c6-hackintosh](https://github.com/tylernguyen/x1c6-hackintosh)项目
+- [MSzturc](https://github.com/MSzturc) 编写的[ThinkpadAssistant](https://github.com/MSzturc/ThinkpadAssistant)和ACPI补丁
